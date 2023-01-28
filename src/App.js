@@ -1,17 +1,17 @@
 // import logo from './logo.svg';
 import './App.css';
 
-// import About from './components/About';
+import About from './components/About';
 import Navbar from "./components/Navbar";
 import TextForm from "./components/TextForm";
 import Alert from './components/Alert';
 import React, { useState } from 'react'
 
-// import {
-//   BrowserRouter as Router,
-//   Routes,
-//   Route
-// } from "react-router-dom";
+import {
+  BrowserRouter,
+  Routes,
+  Route
+} from "react-router-dom";
 
 // let description = "My name is Devansh Mundi and i am pursuing B.tech computer science engineering at Sushila Devi Bansal College Indore."    
 function App() {
@@ -118,7 +118,7 @@ function App() {
     //     </>
     // ----------------------------------------------------------------------------
     <>
-      {/* <Router> */}
+      <BrowserRouter basename='/React-Textutils'>
 
         <Navbar title="Power Ranger" mode={mode} togglemode={togglemode} btntxt1={btntxt1} />
 
@@ -130,19 +130,19 @@ function App() {
         {/* next lecture */}
 
         <div className="container mb-3">
-          {/* <Routes>
+          <Routes>
+            <Route exact path ="/React-Textutils" element = {<TextForm heading="Enter your information to analysis" mode={mode} showalert={showalert} />}></Route>
             <Route  path ="/About" element={<About mode={mode} togglemode={togglemode} btntxt1={btntxt1} />}></Route>
-            <Route path ="/" element = {<TextForm heading="Enter your information to analysis" mode={mode} showalert={showalert} />}></Route>
-          </Routes> */}
+          </Routes>
 
           {/* textform component for using to show text*/}
-          <TextForm heading="Enter your information to analysis" mode={mode} showalert={showalert} />
+          {/* <TextForm heading="Enter your information to analysis" mode={mode} showalert={showalert} /> */}
 
           {/* about component for using about component and dark mode*/}
           {/* <About /> */}
 
         </div>
-      {/* </Router> */}
+      </BrowserRouter>
     </>
 
 
