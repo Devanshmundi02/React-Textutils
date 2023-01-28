@@ -131,7 +131,7 @@ function App() {
 
         <div className="container mb-3">
           <Routes>
-            <Route exact path ="/React-Textutils" element = {<TextForm heading="Enter your information to analysis" mode={mode} showalert={showalert} />}></Route>
+            <Route exact path ="/" element = {<TextForm heading="Enter your information to analysis" mode={mode} showalert={showalert} />}></Route>
             <Route  path ="/About" element={<About mode={mode} togglemode={togglemode} btntxt1={btntxt1} />}></Route>
           </Routes>
 
